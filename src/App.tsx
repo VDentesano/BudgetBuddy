@@ -1,15 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './routes/Login';
-import Dashboard from './routes/Dashboard';
+import DashboardPage from './routes/Dashboard';
+import Header from './components/Header';
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/logged/dashboard" element={<Dashboard />} />
-      </Routes>
+      <div className="flex min-h-screen w-full flex-col bg-background">
+        <Header />
+        <Routes>
+          <Route path="/logged/dashboard" element={<DashboardPage />} />
+          {/* Otras rutas pueden ir aquí */}
+        </Routes>
+      </div>
     </Router>
   );
 };

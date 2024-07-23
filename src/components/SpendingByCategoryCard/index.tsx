@@ -1,28 +1,26 @@
 import React from 'react';
-import { Card, Typography } from '@mui/material';
-import { Doughnut } from 'react-chartjs-2';
-import 'chart.js/auto';
-
-const data = {
-  labels: ['Rent', 'Food', 'Entertainment', 'Transportation'],
-  datasets: [
-    {
-      data: [400, 300, 200, 100],
-      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
-      hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
-    }
-  ]
-};
 
 const SpendingByCategoryCard: React.FC = () => {
   return (
-    <Card className="dashboard-card">
-      <Typography variant="h6">Spending by Category</Typography>
-      <Typography variant="subtitle1">
-        Track your spending across different categories
-      </Typography>
-      <Doughnut data={data} />
-    </Card>
+    <div className="rounded-lg border bg-card  shadow-sm text-foreground">      <div className="flex flex-col space-y-1.5 p-6">
+        <h3 className="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
+          Spending by Category
+        </h3>
+        <p className="text-sm text-muted-foreground">
+          Track your spending across different categories
+        </p>
+      </div>
+      <div className="p-6">
+        <div className="aspect-square">
+          <div
+            className="flex aspect-video justify-center text-xs [&_recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_recharts-curve.recharts-tooltip-cursor]:stroke-border [&_recharts-dot[stroke='#fff']]:stroke-transparent [&_recharts-layer]:outline-none [&_recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_recharts-radial-bar-background-sector]:fill-muted [&_recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_recharts-reference-line_[stroke='#ccc']]:stroke-border [&_recharts-sector[stroke='#fff']]:stroke-transparent [&_recharts-sector]:outline-none [&_recharts-surface]:outline-none"
+            data-chart="chart-R1pmnpnltf9f"
+          >
+            <div className="recharts-responsive-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

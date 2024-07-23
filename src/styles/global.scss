@@ -52,12 +52,12 @@ h6 {
 }
 
 #root {
+  height: 100%;
+  font-family: var(--font-family);
+
   label {
     font-family: var(--font-family);
   }
-
-  height: 100%;
-  font-family: var(--font-family);
 
   ::-webkit-scrollbar {
     width: 10px;

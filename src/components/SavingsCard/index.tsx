@@ -2,10 +2,13 @@ import React from 'react';
 
 const SavingsCard: React.FC = () => {
   return (
-    <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div className="flex flex-col space-y-1.5 p-6">
-        <h3 className="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Savings</h3>
-        <p className="text-sm text-muted-foreground">Total savings this month</p>
+    <div className="rounded-lg border bg-card  shadow-sm text-foreground">      <div className="flex flex-col space-y-1.5 p-6">
+        <h3 className="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
+          Savings
+        </h3>
+        <p className="text-sm text-muted-foreground">
+          Total savings this month
+        </p>
       </div>
       <div className="p-6 flex items-center justify-between">
         <div className="text-4xl font-bold">$1,822</div>
